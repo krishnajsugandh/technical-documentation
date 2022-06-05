@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tribute page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+
+<style>
+body {
+
+  margin: 0;
+
+  display: flex; 
+  
+ background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(128,248,174,1) 0%, rgba(223,244,148,1) 90% );
+
+ font-family: 'Kdam Thmor Pro', sans-serif;
+ 
+}
+
+#navbar {
+  position: fixed;
+  width: 25%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.5);
+  overflow-x: hidden;
+  padding: 1.5em;
+  
+}
+.nav-link {
+  text-decoration: none;
+  color: black;
+  transition: all 0.5s ease;
+  padding: 1em;
+}
+
+.nav-link:hover {
+  background: #000;
+  color: #ddd;
+  border-left: 5px solid #ddd;
+}
+
+#main-doc {
+  margin-left: 30%;
+  width: 70%;
+}
+
+@media (max-width: 1000px) {
+
+body {
+  flex-direction: column;
+  }
+
+#navbar {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  
+  padding: 0;
+  
+}
+
+#main-doc {
+  width: 100%;
+  margin-left: 0;
+}
+
+
+}
+</style>
+</head>
+<body>
+
+  <nav id='navbar'>
+
+    <header>PHP documentation</header>
+
+
+      <a class='nav-link' href='#Introduction'>Introduction</a>
+
+      <a class='nav-link' href='#Install'>Install</a>
+
+      <a class='nav-link' href='#Syntax'>Syntax</a>
+
+      <a class='nav-link' href='#Comments'>Comments</a>
+
+      <a class='nav-link' href='#Variables'>Variables</a>
+
+      <a class='nav-link' href='#Echo'>Echo</a>
+
+      <a class='nav-link' href='#Print'>Print</a>
+
+      <a class='nav-link' href='#Data_types'>Data types</a>
+
+      <a class='nav-link' href='#Strings'>Strings</a>
+
+      <a class='nav-link' href='#Numbers'>Numbers</a>
+
+      <a class='nav-link' href='#Math'>Math</a>
+
+      <a class='nav-link' href='#Functions'>Functions</a>
+
+     </nav>
+
+  <main id='main-doc'>
+
+      <section class='main-section' id='Introduction'>
+
+        <header>Introduction</header>
+
+          <p>PHP code is executed on the server.</p> 
+
+          <h2>What is PHP?</h2>
+
+          <ul>
+
+            <li>PHP is an acronym for "PHP: Hypertext Preprocessor"</li>
+
+            <li>PHP is a widely-used, open source scripting language</li>
+
+            <li>PHP scripts are executed on the server</li>
+
+            <li>PHP is free to download and use</li>
+
+          </ul>
+
+          <h2>What can PHP do?</h2>
+
+          <ul>
+
+              <li>PHP can generate dynamic page content</li>
+
+              <li>PHP can create, open, read, write, delete, and close files on the server</li>
+
+              <li>PHP can collect form data</li>
+
+              <li>PHP can send and receive cookies</li>
+
+              <li>PHP can add, delete, modify data in your database</li>
+
+              <li>PHP can be used to control user-access</li>
+
+              <li>PHP can encrypt data</li>
+
+            </ul>
+      </section>
+
+      <section class='main-section' id='Install'>
+        <header>Install</header>
+
+        <h2>Set Up PHP on Your Own PC</h2>
+
+        <p>The official PHP website (PHP.net) has installation instructions for PHP</p>
+
+        <h2>Use a Web Host With PHP Support</h2>
+
+        <p>If your server has activated support for PHP you do not need to do anything.</p>
+
+        <p>Just create some <code>.php</code> files, place them in your web directory, and the server will automatically parse them for you.</p>
+
+        <p>You do not need to compile anything or install any extra tools.</p>
+
+        <p>Because PHP is free, most web hosts offer PHP support.</p>
+
+      </section>
+
+      <section class='main-section' id='Syntax'>
+        <header>Syntax</header>
+
+        <p>A PHP script is executed on the server, and the plain HTML result is sent back to the browser.</p>
+
+        <h2>Basic PHP Syntax</h2>
+
+        <p>A PHP script can be placed anywhere in the document.</p>
+
+        <p>A PHP script starts with <code> ?php</code> and ends with <code>?></code> </p>
+
+        <p>The default file extension for PHP files is "<code> .php </code>".</p>
+
+        <p>A PHP file normally contains HTML tags, and some PHP scripting code</p>
+      </section>
+
+      <section class='main-section' id='Comments'>
+        <header>Comments</header>
+
+        <h2>Comments in PHP</h2>
+
+        <p>A comment in PHP code is a line that is not executed as a part of the program. Its only purpose is to be read by someone who is looking at the code.</p>
+
+        <p>PHP supports several ways of commenting i.e single line and multiple line comments</p>
+      </section>
+
+      <section class='main-section' id='Variables'>
+        <header>Variables</header>
+
+        <p>Variables are "containers" for storing information.</p>
+
+        <h2>Creating (Declaring) PHP Variables</h2>
+
+        <p>In PHP, a variable starts with the <code>$</code> sign, followed by the name of the variable</p>
+
+        <h3>PHP variable names are case-sensitive!</h3>
+
+        <p>A variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume).</p>
+      </section>
+
+      <section class='main-section' id='Echo'>
+        <header>Echo</header>
+
+        <h2>The PHP echo Statement</h2>
+
+        <p>The echo statement can be used with or without parentheses: <code>echo</code> or <code>echo()</code> </p>
+
+      </section>
+
+      <section class='main-section' id='Print'>
+        <header>Print</header>
+
+        <h2>The PHP print Statement</h2>
+
+        <p>The print statement can be used with or without parentheses: <code>print</code> or <code>print()</code> </p>
+
+      </section>
+
+      <section class='main-section' id='Data_types'>
+        <header>Data types</header>
+
+        <h2>PHP Data Types</h2>
+
+        <p>Variables can store data of different types, and different data types can do different things.</p>
+
+        <p>PHP supports the following data types:</p>
+
+        <ul>
+          
+           <li>String</li>
+
+           <li>Integer</li>
+
+           <li>Float (floating point numbers - also called double)</li>
+
+           <li>Boolean</li>
+
+           <li>Array</li>
+
+           <li>Object</li>
+
+           <li>NULL</li>
+
+           <li>Resource</li>
+
+          </ul>
+      </section>
+
+      <section class='main-section' id='Strings'>
+        <header>Strings</header>
+
+        <h2>PHP Strings</h2>
+
+        <p>A string is a sequence of characters, like "Hello world!".</p>
+
+        <h3>PHP String Functions</h3>
+
+        <p>In this chapter we will look at some commonly used functions to manipulate strings.</p>
+
+        <h4>strlen() - Return the Length of a String</h4>
+
+        <p>The PHP strlen() function returns the length of a string.</p>
+
+        <h4>str_word_count() - Count Words in a String</h4>
+
+        <p>The PHP str_word_count() function counts the number of words in a string.</p>
+
+        <h4>strrev() - Reverse a String</h4>
+
+        <p>The PHP strrev() function reverses a string.</p>
+
+        <h4>strpos() - Search For a Text Within a String</h4>
+
+        <p>The PHP strpos() function searches for a specific text within a string. If a match is found, the function returns the character position of the first match. If no match is found, it will return FALSE.</P>
+
+        <h4>str_replace() - Replace Text Within a String</h4>
+
+        <p>The PHP str_replace() function replaces some characters with some other characters in a string.</p>
+      </section>
+
+      <section class='main-section' id='Numbers'>
+        <header>Numbers</header>
+
+        <h2>PHP Numbers</h2>
+
+        <p>One thing to notice about PHP is that it provides automatic data type conversion.</p>
+
+        <p>So, if you assign an integer value to a variable, the type of that variable will automatically be an integer. Then, if you assign a string to the same variable, the type will change to a string</p>
+
+        <p>This automatic conversion can sometimes break your code.</p>
+      </section>
+
+      <section class='main-section' id='Math'>
+        <header>Math</header>
+
+        <h2>PHP Math</h2>
+
+        <p>PHP has a set of math functions that allows you to perform mathematical tasks on numbers.</p>
+
+        <h4>PHP pi() Function</h4>
+
+        <p>The pi() function returns the value of PI</p>
+
+        <h4>PHP min() and max() Functions</h4>
+
+        <p>The min() and max() functions can be used to find the lowest or highest value in a list of arguments</p>
+
+        <h4>PHP abs() Function</h4>
+
+        <p>The abs() function returns the absolute (positive) value of a number</p>
+
+        <h4>PHP sqrt() Function</h4>
+
+        <p>The sqrt() function returns the square root of a number</p>
+
+        <h4>PHP round() Function</h4>
+
+        <p>The round() function rounds a floating-point number to its nearest integer</p>
+
+        <h4>Random Numbers</h4>
+
+        <p>The rand() function generates a random number</p>
+      </section>
+
+      <section class='main-section' id='Functions'>
+        <header>Functions</header>
+
+        <h2>PHP Functions</h2>
+
+        <p>The real power of PHP comes from its functions.</p>
+
+        <p>PHP has more than 1000 built-in functions, and in addition you can create your own custom functions. </p>
+
+        <p>Besides the built-in PHP functions, it is possible to create your own functions.</p>
+
+        <ul>
+         
+         <li>A function is a block of statements that can be used repeatedly in a program.</li>
+
+         <li>A function will not execute automatically when a page loads.</li>
+
+         <li>A function will be executed by a call to the function.
+</li>
+
+          </ul>
+      </section>
+    </main>
+</body>
+</html>
+
